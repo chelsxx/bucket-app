@@ -25,3 +25,4 @@ production:
   encoding: unicode
   database: bucketlist_development
   pool: 5
+  

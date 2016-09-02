@@ -1,0 +1,60 @@
+// Place all the styles related to the Welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+   
+/* ---------->>> Welcome Index <<<-----------*/       
+#content {
+    padding: 100px 0px 100px 0px;
+    margin: -25px 0 auto auto;
+    background: url(background) no-repeat center center scroll; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+/* Text Styles */
+
+#home_heading{
+    text-align: center;
+    color: #fff;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 0 0 15px 0;
+    margin: 0px;
+    
+}
+
+#home_subheading {
+    margin: 0;
+    padding: 0 0 10px 0;
+    color: #fff;
+    font-size: 22px;
+}
+
+#home_text {
+    margin: 0;
+    padding:  0 0 5px 0;;
+    color: #fff;
+}
+
+p {
+  font-family: "Helvetica", Arial;
+   text-align: center;
+}
+
+#start_button, #start_button a:visited {
+    background-color: #750a75;
+    color:#fff;
+    margin: 35px 0 0 0;
+    border: none;
+}
+
+
+
+
+
+
+
+

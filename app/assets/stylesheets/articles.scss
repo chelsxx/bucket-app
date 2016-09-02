@@ -1,0 +1,148 @@
+// Place all the styles related to the Articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/* ------------->>> Type Styles <<<--------------*/  
+
+h2 { text-align: center; }
+
+h3 { text-align: center;}
+
+p {word-wrap: break-word;}
+
+
+/* ---------->>> Filters <<<-----------*/ 
+
+fieldset {margin: 0 auto; }
+fieldset div.btn-group {color: #750a75;}
+fieldset div.btn-group a:hover { color: #4c064c; }
+.filters {
+   padding: 0 5px 0 10px ;
+   margin: 15px auto 20px auto;
+   color: #750a75;
+}
+
+#category_sort {
+    float: left;
+    display: inline;
+}
+#date_sort {
+    float: right;
+    display: inline;
+}
+
+/* ---------->>> Article Index, Show and New <<<-----------*/     
+
+
+p.label-primary {
+    background-color: #750a75;
+    font-family: "Helvetica", Arial;
+    font-size: 12px;
+    margin: 0 auto;
+}
+
+span.label-primary {
+    background-color: #750a75;
+    font-family: "Helvetica", Arial;
+    font-size: 12px;
+    margin: 0 auto;
+}
+
+
+#index_article_title a:link, #index_article_title a:visited,#index_article_title a:hover,#index_article_title a:active,  {
+    color:#6d0d6d;
+    font-family: "Helvetica", Arial;
+}
+
+.show_article_div {
+    margin: 0 auto;
+    max-width: 700px;
+    padding: 0 0 15px 0;
+}
+.article-item {
+    margin-bottom: 25px;
+}
+
+#div_picture_response{
+    margin: 0 auto;
+    max-width: 100px;
+    padding: 15px 0 15px 0;
+}
+
+#picture_response {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+#show_article_text {
+    margin: 0 auto;
+}
+
+h2.show_article_title {
+    padding-bottom: 10px;
+    color: #750a75;
+    font-family: "Helvetica", Arial;
+    font-size: 22px;
+}
+
+h2.show_comment_title {
+    color: #750a75;
+    font-family: "Helvetica", Arial;
+    font-size: 18px;
+}
+
+.show_article_date {
+    padding: 0;
+    margin: 5px auto;
+    display: block;
+}
+#show_bottom_nav {
+    color: #750a75;
+    font-family: "Helvetica", Arial;
+    padding: 5px 0 15px 0;
+}
+
+.new_heading {
+    color: #750a75;
+    font-family: "Helvetica", Arial;
+    font-size: 22px;
+}
+
+
+/* ---------->>> Forms <<<-----------*/ 
+
+.form_question {
+    font-size: 12px;
+}
+
+.form_answer {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    max-width: 700px;
+}
+
+textarea {
+    resize: none;
+    max-width: 700px; 
+    margin: auto;
+    padding: 5px 0 0 0;
+    height: 100%;
+}
+
+.save_button, .save_button a:visited {
+    background-color: #750a75;
+    color:#fff;
+}
+
+
+#save_button, #save_button a:visited {
+    background-color: #750a75;
+    color:#fff;
+}
+
+#form_descriptionanswer {
+    padding: 0;
+}

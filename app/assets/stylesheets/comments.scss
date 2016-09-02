@@ -1,0 +1,26 @@
+// Place all the styles related to the Comments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/* ---------->>> Comments <<<-----------*/ 
+#form_comment {
+   max-width: 700px; 
+   margin: auto;
+}
+
+#form_commenter {
+    max-width: 700px; 
+    margin: auto;
+}
+
+
+#save_comment_button, #save_comment_button a:visited {
+    background-color: #750a75;
+    color:#fff;
+}
+
+#form {
+    margin: 0 auto;
+    max-width: 700px;
+}

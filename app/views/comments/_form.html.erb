@@ -1,0 +1,19 @@
+
+<div id="form">
+<%= form_for([@article, @article.comments.build]) do |f| %>
+  <p>
+    <%= f.label :commenter, :class => "text-left" %><br>
+    <%= f.text_field :commenter, :required => true, :class => "form-control padding-b10", :placeholder => "Name", :id => "form_commenter" %>
+  </p>
+  <br>
+  <p>
+    <%= f.label :body, :class => "text-left" %> <br>
+    <%= f.text_area :body,  :required => true, :class => "form-control input-lg padding-b10", :placeholder=> "Comment", :id => "form_comment" %>
+  </p>
+  <p>
+    <%= f.submit "Save", :class =>"btn btn-primary", :id => "save_comment_button" %>
+    
+  </p>
+<% end %>
+
+</div>

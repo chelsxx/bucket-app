@@ -1,0 +1,44 @@
+
+ <% params[:filters] ||= {} %>
+<form class="form-inline filters">
+  <fieldset>
+ <input class="categories" id="category_sort" type="hidden" name="filters[when]" value="<%= params[:filters][:when] || '' %>">
+        <div class="btn-group">
+            <%= link_to 'Food', articles_url(filters: params[:filters].merge(when: 'Food')), class: "btn btn-inverse #{'active' if params[:filters][:when] == 'Food'}" %>
+            <%= link_to 'Places', articles_url(filters: params[:filters].merge(when: 'Places')), class: "btn btn-inverse #{'active' if params[:filters][:when] == 'Places'}" %>
+            <%= link_to 'Activities', articles_url(filters: params[:filters].merge(when: 'Activities')), class: "btn btn-inverse #{'active' if params[:filters][:when] == 'Activities'}" %>
+            <%= link_to 'All', articles_url(filters: params[:filters].merge(when: nil)), class: "btn btn-inverse #{'active' if params[:filters][:when].blank?}" %>
+        </div>
+  <input class="date" id="date_sort" type="hidden" name="filters[sort]" value="<%= params[:filters][:sort] || '' %>">
+        <div class="btn-group">
+            <%= link_to 'Newest First', articles_url(filters: params[:filters].merge(sort: nil)), class: "btn btn-inverse #{'active' if params[:filters][:sort].blank?}" %>
+            <%= link_to 'Oldest First', articles_url(filters: params[:filters].merge(sort: 'start_time')), class: "btn btn-inverse #{'active' if params[:filters][:sort] == 'start_time'}" %>
+        </div>
+        
+   </fieldset>
+</form>
+
+  <div class="container">
+ <% @articles.each_slice(3) do |articler| %>
+          <div class="row">
+  <% articler.each do |article| %>
+    <div class="col-md-4 col-sm-6 article-item">
+                <%= link_to image_tag(article.picture.cover.url, :class => "img-responsive"), article_path(article) %>
+                <h3 id="index_article_title">
+                    <%= link_to article.title, article_path(article) %>
+                </h3>
+                <p class="text-left" id="index_article_text">
+                Bucketed on 
+  <em><strong><%= article.created_at.strftime("%e %b")%></strong></em> <br/>
+                <%= link_to 'Edit', edit_article_path(article), :class => "btn btn-default btn-xs", :role => "button" %>
+                <%= link_to 'Delete', article_path(article), 
+              method: :delete,
+              data: { confirm: 'Are you sure you want to get rid of this?' },
+              :class => "btn btn-default btn-xs", :role => "button" %>
+              </p>
+            </div>
+  <% end %>
+  </div>
+  <% end %>
+</div>
+

@@ -1,0 +1,11 @@
+<div>
+  <p class="show_comment">
+ <strong><%= comment.commenter %> says: </strong> <%= comment.body %>
+  </p>
+<p>
+  <%= link_to 'Delete Comment', [comment.article, comment],
+               method: :delete,
+               data: { confirm: 'Are you sure you want to get rid of this?' },
+               :class => "btn btn-default btn-xs", :role => "button" %>
+</p>
+</div>

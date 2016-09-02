@@ -1,0 +1,116 @@
+/* note: renamed to scss; ignore below.
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ 
+@import "bootstrap-sprockets"; /*this must be first*/
+@import "bootstrap";
+
+
+/* ---------->>> Useful CSS Classes <<<-----------*/
+.width100 { width: 100%; }
+.width75 { width: 75%; }
+.width50 { width: 50%; }
+.floatLeft { float: left; }
+.floatRight { float: right; }
+.alignLeft { text-align: left; }
+.alignRight { text-align: right; }
+.hidden {display:none;}
+.inline {display:inline;}
+.halign { margin: 0 auto;}
+
+/* ----------------------------------------------------*/   
+/* ---------->>> Header, Navbar, Footer <<<-----------*/   
+/* ----------------------------------------------------*/   
+html {
+    background-color: #750a75;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0; 
+    padding: 0;
+
+}
+
+h1 { text-align: center; }
+
+header {
+    background-color: #750a75;
+}
+
+.footer {
+    background-color: #750a75;
+    margin: -10px -220px 0 -220px;
+    padding: 10px 0 0 0;
+}
+
+#nav {background-color: #000;}
+
+.nav {
+display: inline-block;
+  float: none;
+  margin:0;
+  font-family: "Helvetica", Arial;
+  background-color: #000;
+}
+
+.navbar-inverse {
+    margin: 0;
+    background-color: #000;
+}
+
+ .navbar-collapse{
+    text-align: center;
+}
+.nav .navbar-nav {
+    text-align: center;
+    background-color: #000;
+}
+
+
+
+#slogan {
+    color:#fff;
+    font-size: 13px;
+}
+
+
+#logo a:link, #logo a:visited, #logo a:hover, #logo a:active, {
+    text-decoration: none;
+    color: #fff;
+    font-family: "Kaushan Script", "Helvetica", Arial;
+}
+
+
+#footer_logo {
+    font-family: "Kaushan Script", "Helvetica", Arial;
+    margin: 10px 0 -10px 0;
+    padding: 10px 0px 0px 0px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #fff;
+}
+
+#footer_text {
+  margin: 0px 0 -10px 0;
+  padding: 5px 0px 15px 0px;
+  font-family: "Helvetica", Arial;
+  font-size: 14px;
+  color: #fff;
+}
+
+
+

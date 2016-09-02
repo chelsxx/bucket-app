@@ -1,0 +1,41 @@
+<h2 class="show_article_title">
+  <strong><%= @article.title %></strong>
+</h2>
+ 
+ <div class ="container">
+  <p><%= image_tag(@article.picture_url, :alt => "image", :class => "img-responsive halign") %></p>
+
+<div class="show_article_div">
+<p class ="label label-primary">
+  #<%= @article.category%>
+</p>
+<p class="text-left show_article_date">    
+ <span class="label label-primary">Date Created</span><strong>  <%= @article.created_at.strftime("%e %b %Y")%></strong>
+</p>
+<p class="text-left show_article_date">    
+ <span class="label label-primary">Complete By</span><strong> <%= @article.date.strftime("%e %b %Y") %></strong>
+</p>
+</div>
+
+<div class="show_article_div">
+<p id="show_article_text">
+  <%= @article.text %>
+</p>
+</div>
+
+<h2 class="text-center show_comment_title">Comments</h2>
+<% if @article.comments.empty?   %>
+<p class="show_comment"> No comments yet! </p>
+<% else %>
+<%= render @article.comments %>
+<% end %>
+
+<h2 class="text-center show_comment_title">Add a Comment</h2>
+<%= render 'comments/form' %>
+ 
+ <p class="text-center" id="show_bottom_nav">
+<%= link_to 'Edit', edit_article_path(@article) %> |
+<%= link_to 'Back', articles_path %> |
+<%= link_to 'New Goal', new_article_path %>
+</p>
+</div>
